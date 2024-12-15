@@ -11,13 +11,28 @@
 22
 1
 */
+let valido = false;
+let numeroFinal
+
+do {
+  numeroFinal = prompt("Seleccione un Numero Para la Piramide")
+
+  if (!Number.isInteger(parseInt(numeroFinal))) {
+    alert("Debe ingresar un número entero.");
+  } else {
+    valido = true;;
+  }
+
+
+} while (!valido);
+
 
 let cont = ""
 let accumulador = "";
-for (let i = 30; i >= 1; i--) {
+for (let i = numeroFinal; i >= 1; i--) {
   cont = "";
   for (let j = 0; j < i; j++) {
-    cont += (i.toString());   
+    cont += (i.toString());
   }
   accumulador += cont;
   accumulador += "\n";
